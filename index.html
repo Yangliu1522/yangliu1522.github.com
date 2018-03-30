@@ -5,38 +5,16 @@
 	<title>Document</title>
 </head>
 <body>
-	Test About Moon
-	<style>
-		.moon {
-			border: 3px solid black;
-			border-radius: 50%;
-			width: 300px;
-			height: 300px;
-		}
-		.yellow {
-			background: #fffa6a;
-		}
-	</style>
-	<div class="moon">
-
-	</div>
-
 	<script>
-		var app = document.querySelector('.moon');
+		var ac = Array();
+		ac.push(1);
+		ac.push(2);
+		ac.push(3);
 
-        function star() {
-            setTimeout(function () {
-                app.className += ' yellow';
-                setTimeout(function () {
-                    app.className = 'moon';
-                    star();
-                },800);
-            },800);
-        }
-
-		window.onload = function () {
-			star();
+		for (var i =0; i< ac.length; i++) {
+		    alert(ac[i]);
 		}
+		console.log(ac)
 	</script>
 </body>
 </html>
