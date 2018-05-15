@@ -1,20 +1,315 @@
-<!DOCTYPE html>
+<?php ?>
+<!Doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML</title>
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/color-brewer.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/css.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/html.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/python.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            background: #000;
+            color: #fff;
+        }
+
+        p {
+        font-size: 16px;
+        }
+
+        pre {
+           font-size: 16px;
+           white-space: pre-wrap;
+			word-wrap: break-word;
+        }
+
+        .teach {
+            width: 70%;
+            display: none;
+            padding: 50px;
+            margin: 0 auto;
+        }
+
+        .botton_list {
+            width: 70%;
+            margin: 20px auto;
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .next {
+            float: right;
+        }
+
+        .prev {
+            float: left;
+        }
+        @media (max-width: 700px) {
+            .teach {
+                width: 95%;
+                display: none;
+                padding: 0;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
-	<script>
-		var ac = Array();
-		ac.push(1);
-		ac.push(2);
-		ac.push(3);
 
-		for (var i =0; i< ac.length; i++) {
-		    alert(ac[i]);
-		}
-		console.log(ac)
-	</script>
+<div class="teach">
+    <h1>
+        html 超文本标记语言
+    </h1>
+    <p>
+        超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。
+
+        您可以使用 HTML 来建立自己的 WEB 站点，HTML 运行在浏览器上，由浏览器来解析。
+    </p>
+    <br />
+    <pre>
+        注意：对于中文网页需要使用 <meta charset="utf-8"> 声明编码，否则会出现乱码。有些浏览器会设置 GBK  为默认编码，则你需要设置为 <meta charset="gbk">。
+    </pre>
+    <br />
+     例子
+    <pre><code class="html">
+        &lt;!DOCTYPE html&gt;
+
+        &lt;html&gt;
+
+        &lt;head&gt;
+
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+
+        &lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;
+
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+            	&lt;h1&gt;我的第一个标题&lt;/h1&gt;
+
+            	&lt;p&gt;我的第一个段落。&lt;/p&gt;
+
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+    </code></pre>
+    <br />
+    <p>注意: runoob.com 是个很好的学习基础的站点 </p>
+    <h2>实例解析</h2>
+    <pre><code class="html">
+        &lt;!DOCTYPE html&gt; 声明为 HTML5 文档
+        &lt;html&gt; 元素是 HTML 页面的根元素
+        &lt;head&gt; 元素包含了文档的元（meta）数据
+        &lt;title&gt; 元素描述了文档的标题
+        &lt;body&gt; 元素包含了可见的页面内容
+        &lt;h1&gt; 元素定义一个大标题
+        &lt;p&gt; 元素定义一个段落
+
+    </code></pre>
+    <br />
+    <p>
+        HTML文档的后缀名
+        .html
+        .htm
+        以上两种后缀名没有区别，都可以使用。
+    </p>
+    <br>
+    <h2>什么是HTML?</h2>
+    <p>HTML 是用来描述网页的一种语言。</p>
+    <pre><code class="html">
+    <ul>
+        <li>HTML 指的是超文本标记语言: HyperText Markup Language</li>
+        <li>HTML 不是一种编程语言，而是一种标记语言</li>
+        <li>标记语言是一套标记标签 (markup tag)</li>
+        <li>HTML 使用标记标签来描述网页</li>
+        <li>HTML 文档包含了HTML 标签及文本内容</li>
+        <li>HTML文档也叫做 web 页面</li>
+    </ul>
+    </code></pre>
+    <p>
+        HTML 标签
+        HTML 标记标签通常被称为 HTML 标签 (HTML tag)。<br>
+    </p>
+    <pre><code class="html">
+    HTML 标签是由尖括号包围的关键词，比如 &lt;html>
+    HTML 标签通常是成对出现的，比如 <b> 和 </b>
+    标签对中的第一个标签是开始标签，第二个标签是结束标签
+    开始和结束标签也被称为开放标签和闭合标签
+    <标签>内容&lt;/标签>
+    </code></pre>
+    <p>
+        "HTML 标签" 和 "HTML 元素" 通常都是描述同样的意思.
+
+        但是严格来讲, 一个 HTML 元素包含了开始标签与结束标签，如下实例:
+    </p>
+    <pre><code class="html">
+    HTML 元素:
+
+    <p>这是一个段落。</p>
+    </code></pre>
+
+    <h2>HTML 编辑器推荐</h2>
+    <pre><code class="html">
+        可以使用专业的 HTML 编辑器来编辑 HTML，菜鸟教程为大家推荐几款常用的编辑器：
+
+        Notepad++：https://notepad-plus-plus.org/
+        Sublime Text：http://www.sublimetext.com/
+        HBuilder：http://www.dcloud.io/
+        VsCode:  https://code.visualstudio.com/
+        你可以从以上软件的官网中下载对应的软件，按步骤安装即可。
+
+    </code></pre>
+</div>
+
+<div class="teach">
+    <h1>HTML 基础</h1>
+    <p>HTML 标题</p>
+    <p>HTML 标题（Heading）是通过&lt;h1> - &lt;h6> 标签来定义的.</p>
+    <br>
+    <pre><code class="html">
+        例子
+        <h1>这是一个标题</h1>
+        <h2>这是一个标题</h2>
+        <h3>这是一个标题</h3>
+    </code></pre>
+    <br>
+    <h2>HTML 段落</h2>
+    <p>HTML 段落是通过标签 &lt;p> 来定义的.</p>
+    <br>
+    <pre><code class="html">
+        例子
+        <p>这是一个段落。</p>
+        <p>这是另外一个段落。</p>
+    </code></pre>
+    <br>
+    <h2>HTML 链接</h2>
+    <p>HTML 链接是通过标签 &lt;a> 来定义的</p>
+    <br>
+    <pre><code class="html">
+        <a href="http://www.runoob.com">这是一个链接</a>
+    </code></pre>
+    <br>
+    <pre>
+        提示:在 href 属性中指定链接的地址。
+
+        (您将在本教程稍后的章节中学习更多有关属性的知识).
+    </pre>
+    <br>
+    <h2>HTML 图像</h2>
+    <p>HTML 图像是通过标签 &lt;img> 来定义的.</p>
+    <br>
+    <pre><code class="html">
+        <img src="/images/logo.png" width="258" height="39" />
+    </code></pre>
+    <br>
+    <h2>HTML 元素</h2>
+    <br>
+    <style>
+        table td {
+            text-align: center;
+        }
+    </style>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>开始标签 *</th>
+                <th>元素内容</th>
+                <th>结束标签 *</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>&lt;p></td>
+            <td>这是一个段落</td>
+            <td>&lt;/p></td>
+        </tr>
+        <tr>
+            <td>&lt;a href="default.htm"></td>
+            <td>这是一个链接</td>
+            <td>&lt;/a></td>
+        </tr>
+        <tr>
+            <td>&lt;br></td>
+            <td>换行</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <pre>
+    *开始标签常被称为起始标签（opening tag），结束标签常称为闭合标签（closing tag）。</pre>
+    <br>
+    <h2>HTML 元素语法</h2>
+    <pre><code class="html">
+    <ul>
+        <li>HTML 元素以开始标签起始</li>
+        <li>HTML 元素以结束标签终止</li>
+        <li>元素的内容是开始标签与结束标签之间的内容</li>
+        <li>某些 HTML 元素具有空内容（empty content）</li>
+        <li>空元素在开始标签中进行关闭（以开始标签的结束而结束）</li>
+        <li>大多数 HTML 元素可拥有属性</li>
+        <li>注释: 您将在本教程的下一章中学习更多有关属性的内容。</li>
+    </ul>
+    </code></pre>
+</div>
+
+<div class="botton_list">
+    <a href="editor.php" class="start">编辑器联系</a>
+    <a href="javascript: prev();" class="prev">上一张</a>
+    <a href="javascript: next();" class="next">下一张</a>
+</div>
+
+<script>
+    let count = document.querySelectorAll('.teach').length;
+    let now = -1;
+    let alldom = document.querySelectorAll('.teach');
+
+    document.querySelector('.start').onclick = function (event) {
+        event.target.style.display = 'none';
+    }
+    function next() {
+        document.body.scrollTop = 0;
+        now = now + 1 < count - 1? now + 1: count;
+        alldom.forEach(function (item) {
+            item.style.display = 'none';
+        });
+        alldom[now].style.display = 'block';
+    }
+
+    function prev() {
+        document.body.scrollTop = 0;
+        now = now - 1 > 1? now - 1: 0;
+        alldom.forEach(function (item) {
+            item.style.display = 'none';
+        });
+        alldom[now].style.display = 'block';
+    }
+
+    function escape2Html(str) {
+        var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+        return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+    }
+
+    document.querySelectorAll('.teach pre code').forEach(function (item) {
+        item.textContent = escape2Html(item.innerHTML);
+        hljs.highlightBlock(item)
+    })
+</script>
+<link rel="stylesheet" href="">
+
 </body>
 </html>
